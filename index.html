@@ -4,102 +4,117 @@
     <meta charset="UTF-8">
     <meta name="description" content="Gabriel Laustens personlige portfolie">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Links til CSS-stilark -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Link til ikoner fra Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Link til GreenSock Animation Platform (GSAP) JavaScript-bibliotek -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Link til din egen JavaScript-fil -->
     <script src="script.js"></script>
     <title>Portfolie</title>
 </head>
 <body>
+    <!-- Navigation bar -->
     <nav class="navbar">
-      <a href="/index.html"><h1>G.V.N.L</h1></a>
-      <div class="burger"><i class="fas fa-bars"></i></div>
-      <ul class="nav-menu">
-        <li class="dropdown"><a href="index.html">Hjem</a></li>
-        <li><a href="index.html#projekter">Projekter</a></li>
-        <li><a href="/about.html">Om</a></li>
-      </ul>
+        <a href="/index.html"><h1>G.V.N.L</h1></a>
+        <!-- Burger-ikon til mobilnavigation -->
+        <div class="burger"><i class="fas fa-bars"></i></div>
+        <ul class="nav-menu">
+            <!-- Hjem-link -->
+            <li class="dropdown"><a href="index.html">Hjem</a></li>
+            <!-- Projekter-link -->
+            <li><a href="index.html#projekter">Projekter</a></li>
+            <!-- Om-link -->
+            <li><a href="/about.html">Om</a></li>
+        </ul>
     </nav>
 
-      <main>
+    <main>
+        <!-- Hero Section -->
         <section class="hero-section">
-          <div class="hero-container">
-          <h1>Gabriel Lausten</h1>
-          <h2>Hej <span class="wave-hand">👋</span></h2>
-          <p>Jeg er Københavns egen UI/UX-designer og front-end udvikler.🚀</p>
-        </div>
+            <div class="hero-container">
+                <h1>Gabriel Lausten</h1>
+                <h2>Hej <span class="wave-hand">👋</span></h2>
+                <p>Jeg er Københavns egen UI/UX-designer og front-end udvikler.🚀</p>
+            </div>
         </section>
 
-
+        <!-- Projekter Section -->
         <section id="projekter">
-          <h2>Projekter</h2>
-        <section class="content-section" id="dyrevaernet">
-          <img src="img/dyreværnet.webp" alt="Dyreværnet" id="dyreaernet" >
-          <div class="content-info">
-          <h2>Dyreværnet</h2>
-          <p>En hjemmeside, der fortæller om en mops sundhed</p>
-          <a href="projekter/dyrevernet.html">Læs mere</a>
-        </div>
-        </section>
-        
-        <section class="content-section" id="pricephone">
-          <img src="img/pricephone.webp" alt="Pricephone">
-          <div class="content-info">
-          <h2>Pricephone</h2>
-          <p>Sammenligning af reparationssteder</p>
-          <a href="projekter/pricephone.html">Læs mere</a>
-        </div>
-        </section>
-        
-        <section class="content-section" id="spotify-x-moveit">
-          <img src="img/harmoni.webp" alt="Spotify X Moveit">
-          <div class="content-info">
-          <h2>Spotify X Moveit</h2>
-          <p>Fancy livsstils højtaler der skaber harmoniii</p>
-          <a href="projekter/harmoni.html">Læs mere</a>
-        </div>
-        </section>
-      </section>
+            <h2>Projekter</h2>
+            <!-- Dyreværnet projekt -->
+            <section class="content-section" id="dyrevaernet">
+                <img src="img/dyreværnet.webp" alt="Dyreværnet" id="dyreaernet">
+                <div class="content-info">
+                    <h2>Dyreværnet</h2>
+                    <p>En hjemmeside, der fortæller om en mops sundhed</p>
+                    <a href="projekter/dyrevernet.html">Læs mere</a>
+                </div>
+            </section>
 
+            <!-- Pricephone projekt -->
+            <section class="content-section" id="pricephone">
+                <img src="img/pricephone.webp" alt="Pricephone">
+                <div class="content-info">
+                    <h2>Pricephone</h2>
+                    <p>Sammenligning af reparationssteder</p>
+                    <a href="projekter/pricephone.html">Læs mere</a>
+                </div>
+            </section>
 
+            <!-- Spotify X Moveit projekt -->
+            <section class="content-section" id="spotify-x-moveit">
+                <img src="img/harmoni.webp" alt="Spotify X Moveit">
+                <div class="content-info">
+                    <h2>Spotify X Moveit</h2>
+                    <p>Fancy livsstils højtaler der skaber harmoniii</p>
+                    <a href="projekter/harmoni.html">Læs mere</a>
+                </div>
+            </section>
+        </section>
 
-      <div class="contact-form">
-        <form action="mail.php" method="post">
-          <label for="name">Navn:</label>
-          <input type="text" id="name" name="navn" required>
-      
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          
-          <label for="subject">Emne:</label>
-          <input type="text" id="subject" name="emne" required>
-      
-          <label for="message">Besked:</label>
-          <textarea id="message" name="besked" required></textarea>
-            
-          <button type="submit">Send besked</button>
-        </form>
-    </div>
-    
-      </main>
-      
-      <footer>
+        <!-- Kontaktformular -->
+        <div class="contact-form">
+            <form action="mail.php" method="post">
+                <label for="name">Navn:</label>
+                <input type="text" id="name" name="navn" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="subject">Emne:</label>
+                <input type="text" id="subject" name="emne" required>
+
+                <label for="message">Besked:</label>
+                <textarea id="message" name="besked" required></textarea>
+
+                <button type="submit">Send besked</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
         <div class="container">
             <div class="github-icon">
+                <!-- Link til GitHub -->
                 <a href="">
-                  <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-github"></i>
                 </a>
             </div>
             <div class="insta-icon">
-              <a href="">
-                <i class="fa-brands fa-instagram"></i>
-              </a>
+                <!-- Link til Instagram -->
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
             </div>
             <div class="linkedin-icon">
+                <!-- Link til LinkedIn -->
                 <a href="">
-                  <i class="fa-brands fa-linkedin"></i>
-                </a>    
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
             </div>
         </div>
     </footer>
