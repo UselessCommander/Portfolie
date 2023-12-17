@@ -1,0 +1,548 @@
+/* Importerer Montserrat og Open Sans skrifttyper fra Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;1,100&family=Open+Sans&display=swap');
+
+/* Definerer grundlæggende font- og farvevariabler til brug i hele stylesheetet */
+:root {
+  --title-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+  --title-font-size: 1.25rem; 
+}
+
+/* Sætter skrifttypen for alle overskrifter og links til titelskrifttypen og størrelsen */
+h1, h2, h3, a {
+  font-family: var(--title-font);
+  font-size: var(--title-font-size);
+}
+
+/* Anvender titelskrifttypen til listeelementer */
+ul li {
+  font-family: var(--title-font);
+}
+
+/* Definerer kroppen og afsnit med kroppens skrifttype og linjehøjde */
+body, p {
+  font-family: var(--body-font);
+  line-height: 1.8;
+}
+
+/* Definerer standardfarven for links */
+a {
+  color: black;
+}
+
+/* Global stil til navigationslinjen */
+.navbar {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 2px solid #002147;
+  background-color: #ffffff;
+}
+
+/* Stil til navigationslinjens titel */
+.navbar a h1 {
+  font-weight: normal;
+}
+
+/* Burgermenu ikon stil */
+.burger {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 24px;
+}
+
+/* Standard stil for navigationsmenuen, skjult som standard */
+.nav-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+/* Stil til den aktive navigationsmenu, viser menuen */
+
+/* Stil til navigationsmenu listeelementer */
+.nav-menu li {
+  text-align: center;
+}
+
+/* Stil til navigationsmenu links */
+.nav-menu li a {
+  padding: 10px;
+  display: block;
+  color: black;
+}
+
+/* Stil til hero-sektionen */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 20px;
+  font-size: 20px;
+}
+
+/* Stil til hero-sektionens overskrifter */
+.hero-section h1 {
+  margin-bottom: 0.5em;
+}
+
+.hero-section h2 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* Keyframe animation til bølgende hånd emoji */
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(-20deg);
+  }
+  20%, 60% {
+    transform: rotate(-20deg);
+  }
+  40%, 80% {
+    transform: rotate(20deg);
+  }
+}
+
+/* Stil til bølgende hånd emoji */
+.wave-hand {
+  display: inline-block;
+  animation: wave 2s infinite; 
+  transform-origin: 70% 70%; 
+}
+
+/* Stil til projekter sektion */
+#projekter {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  width: 100%;
+  padding-top: 90px;
+}
+
+/* Stil til indholdssektioner med baggrundsfarve og skygge */
+.content-section {
+  background-color: #F8F8FF; 
+  color: #002147; /* Farveændring kommenteret */
+  margin: 35px 15px; 
+  padding: 20px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  width: 80vw;
+}
+
+/* Stil til billeder inden i indholdssektioner */
+.content-section img {
+  width: 100%; 
+  max-width: 150px; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto 10px;
+  border-radius: 5px; 
+}
+
+/* Stil til tekst inden i indholdssektioner */
+.content-section p {
+  color: black;
+}
+
+/* Stil til overskrifter, afsnit, og links i indholdssektioner */
+.content-section h2, .content-section p, .content-section a {
+  margin: 20px 0px; 
+}
+
+/* Stil og hover-effekt til links i indholdssektioner */
+.content-section a {
+  background-color: #002147; /* Farveændring kommenteret */
+  color: #FFFDD0; 
+  padding: 10px 20px; 
+  border-radius: 8px;
+  display: inline-block; 
+  text-align: center; 
+  transition: background-color 0.3s ease; 
+}
+
+.content-section a:hover {
+  background-color: #5a2352;
+}
+
+/* Kontaktformular stilarter */
+.contact-form {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  form {
+    padding: 20px;
+    border-radius: 8px;
+  }
+  label {
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  input, textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  input[type="text"], input[type="email"], textarea {
+    border: 1px solid #002147; 
+  }
+  button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #002147;
+    color: #FFFDD0;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  button:hover {
+    background-color: #5a2352;
+  }
+
+/* Stilarter til sidefod */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 20px 0; 
+    height: 100px; 
+    border-top: 2px solid black;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    height: 100%; 
+    width: 80%; 
+}
+
+/* Stilarter til social media ikoner */
+.fa-instagram {
+    background: radial-gradient(circle at 30% 107%, #feda75 0%, #feda75 5%, #fa7e1e 45%, #d62976 60%, #962fbf 79%, #4f5bd5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+}
+
+.fa-linkedin {
+  font-size: 1.5rem;
+  color: #0a66c2;
+}
+
+.fa-github {
+  color: black;
+  font-size: 1.5rem;
+}
+
+
+
+/*projektsider*/
+
+.website-preview {
+  background-color: #F8F8FF;
+  padding: 20px; 
+  text-align: center;
+  margin: 20px auto;
+}
+
+.website-preview img {
+  max-width: 200px; 
+  height: auto;
+  display: block; 
+  margin: 0 auto; 
+}
+
+
+
+.website-preview h2 {
+  margin: 10px 0; 
+}
+
+.website-preview a {
+  background-color: #002147; 
+  color: #FFFDD0; 
+  padding: 10px 20px;
+  border-radius: 5px; 
+  display: inline-block;
+  margin-top: 15px; 
+  text-decoration: none;
+  transition: background-color 0.3s; 
+}
+
+.website-preview a:hover {
+  background-color: #5a2352;
+}
+
+
+
+/* main content projekt sider*/
+
+.description, .about-container{
+  padding: 20px 40px; 
+  font-family: 'Open Sans', sans-serif;
+}
+
+.project-desc p {
+  line-height: 2;
+}
+.description .role ul {
+  padding-left: 0; 
+  margin-left: 1.1em; 
+  list-style-type: disc;
+}
+
+.role {
+  margin-top: 35px;
+}
+
+.role ul li {
+  margin: 5px 0; 
+}
+
+
+
+.solution, .about {
+  background-color: #002147;
+  color: #FFFDD0;
+  padding: 30px; 
+  border-radius: 8px;
+  margin-top: 15px; 
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.solution h2, .about h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+
+
+/*about */
+
+.profile-card {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.profile-image {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.profile-image img {
+  width: 50%; 
+  height: auto; /* aspektforhold */
+  object-fit: cover;
+  margin: 0 auto; /* centrering af billedet */
+}
+
+.skills-apps {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.skills-apps h2 {
+  color: #002147;
+}
+
+
+
+/* Desktops */
+@media (min-width: 768px) {
+
+  .burger {
+    display: none;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .nav-menu {
+    display: block;
+    width: auto; 
+    padding: 0;
+  }
+
+  .nav-menu li {
+    display: inline-block;
+  }
+
+
+   .nav-menu li a {
+    color: black;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Glat overgang for farve og baggrundsfarve */
+  }
+
+  .nav-menu li a:hover, .nav-menu li a:focus {
+    color: #FFFDD0;
+    background-color: #002147;
+  }
+  
+  .hero-section {
+    font-size: 24px; 
+    margin: 60px 40px;
+    align-items: center;
+  } 
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.25em; 
+  }
+  .hero-section h2 {
+    font-size: 2rem;
+  }
+
+  .hero-container {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  
+
+  .content-section img {
+    max-width: 250px; 
+    margin: 30px;
+
+    
+  }
+
+
+  .content-section {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35vw;
+    transition: transform 0.2s ease-in;
+  }
+
+  .content-section:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  }
+
+
+  .content-info {
+    display: flex;
+    flex-direction: column;
+
+
+  }
+
+  .content-section a {
+    width: 150px;
+  }
+  .contact-form {
+    max-width: 800px;
+  }
+
+  .website-preview img {
+    max-width: 400px; 
+  }
+
+ 
+  
+
+  .solution, .about {
+    padding: 60px; 
+  }
+
+/*projekter*/
+ 
+.description-wrapper {
+  display: flex;
+  justify-content: center; /* Centrerer børneelementer horisontalt */
+  align-items: center; /* Centrerer børneelementer vertikalt */
+  flex-wrap: wrap; /* Tillader elementer at falde nedunder hinanden */
+}
+
+
+.project-desc {
+  width: 30vw; 
+  margin: auto; /* Centrerer boksen horisontalt */
+}
+
+.role {
+  margin: auto; /* Centrerer boksen horisontalt  */
+}
+
+.solution {
+  width: 50%; 
+  margin-left: auto; 
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+/*about*/
+.greeting {
+
+  padding-right: 20px;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px; 
+}
+
+
+.profile-image {
+  max-width: 400px;
+  padding: 20px;
+}
+
+.profile-image img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 400px; 
+}
+
+
+.about {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 80px;
+  width: 30vw;
+}
+
+.profile-image {
+  width: 100%;
+}
+
+.profile-image img {
+  width: 100%; /* Gør billedet fuld bredde inden for sin container */
+  max-width: 200px; /* Sætter en maksimal bredde for billedet */
+  height: auto; /* Sørger for at højden justeres proportionalt */
+}
+
+}
+
+

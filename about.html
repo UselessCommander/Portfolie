@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gabriel Laustens personlige portfolie">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="script.js"></script>
+
+    <title>Portfolie</title>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/index.html"><h1>G.V.N.L</h1></a>
+    <div class="burger"><i class="fas fa-bars"></i></div>
+    <ul class="nav-menu">
+      <li class="dropdown"><a href="index.html">Hjem</a></li>
+      <li><a href="index.html#projekter">Projekter</a></li>
+      <li><a href="about.html">Om</a></li>
+    </ul>
+  </nav>
+      <main>
+        <div class="profile-card">
+          <section class="greeting">
+            <h1>Hey <span class="wave-hand">👋</span></h1>
+            <p>Mit navn er Gabriel Lausten</p>
+            <p>Jeg er en passioneret aspirerende UI/UX og front end-dev fra København, der studerer på Zealand i Køge.</p>
+          </section>
+            <div class="profile-image"><img src="img/portrait-tn.png" alt="portræt af gabriel"></div> 
+        </div>
+
+          <section class="about-container">
+          <div class="about">
+            <h2 id="projekt-title">Om mig</h2>
+            <p>Som dedikeret designer og front-end udvikler med en baggrund fra Zealand i Køge, er jeg dybt passioneret omkring visuelt design og brugeroplevelser. Jeg har et talent for at skabe og kode engagerende digitale oplevelser, hvor jeg kombinerer kreativitet med teknisk kunnen. Min arbejdsproces er præget af hurtighed og effektivitet, og jeg arbejder altid med et kundefokuseret mindset, hvilket sikrer, at jeg konsekvent handler i kundens bedste interesser.</p>
+          </div>
+
+          <div class="skills-apps">
+            <div class="skills">
+                <h2>Kompetencer</h2>
+                <ul>
+                    <li>UI Design</li>
+                    <li>Ux Design</li>
+                    <li>Wireframing</li>
+                    <li>Mockup</li>
+                    <li>HTML / CSS</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+            <div class="apps">
+                <h2>Applikationer</h2>
+                <ul>
+                    <li>Premiere Pro</li>
+                    <li>Photoshop</li>
+                    <li>InDesign</li>
+                    <li>Figma / XD</li>
+                    <li>VSCode</li>
+                    <li>Canva</li>
+                </ul>
+            </div>          
+        </section>
+        <div class="contact-form">
+          <form aria-label="Contact Form">
+            <label for="name">Navn:</label>
+            <input type="text" id="name" name="navn" required>
+        
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Emne:</label>
+            <input type="text" id="subject" name="emne" required> <!-- Emnefeltet tilføjet her -->
+        
+            <label for="message">Besked:</label>
+            <textarea id="message" name="besked" required></textarea>
+              
+            <button type="submit">Send besked</button>
+          </form>
+        </div>
+    </section>
+      </main>
+      
+      <footer>
+        <div class="container">
+            <div class="github-icon">
+                <a href="">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <div class="insta-icon">
+              <a href="">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+            <div class="linkedin-icon">
+                <a href="">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>    
+            </div>
+        </div>
+
+        
+    </footer>
+</body>
+</html>

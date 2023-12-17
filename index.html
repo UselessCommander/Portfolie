@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gabriel Laustens personlige portfolie">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="script.js"></script>
+    <title>Portfolie</title>
+</head>
+<body>
+    <nav class="navbar">
+      <a href="/index.html"><h1>G.V.N.L</h1></a>
+      <div class="burger"><i class="fas fa-bars"></i></div>
+      <ul class="nav-menu">
+        <li class="dropdown"><a href="index.html">Hjem</a></li>
+        <li><a href="index.html#projekter">Projekter</a></li>
+        <li><a href="about.html">Om</a></li>
+      </ul>
+    </nav>
+
+      <main>
+        <section class="hero-section">
+          <div class="hero-container">
+          <h1>Gabriel Lausten</h1>
+          <h2>Hej <span class="wave-hand">👋</span></h2>
+          <p>Jeg er Københavns egen UI/UX-designer og front-end udvikler.🚀</p>
+        </div>
+        </section>
+
+
+        <section id="projekter">
+          <h2>Projekter</h2>
+        <section class="content-section" id="dyrevaernet">
+          <img src="img/dyreværnet.webp" alt="Dyreværnet" id="dyreaernet" >
+          <div class="content-info">
+          <h2>Dyreværnet</h2>
+          <p>En hjemmeside, der fortæller om en mops sundhed</p>
+          <a href="projekter/dyrevernet.html">Læs mere</a>
+        </div>
+        </section>
+        
+        <section class="content-section" id="pricephone">
+          <img src="img/pricephone.webp" alt="Pricephone">
+          <div class="content-info">
+          <h2>Pricephone</h2>
+          <p>Sammenligning af reparationssteder</p>
+          <a href="projekter/pricephone.html">Læs mere</a>
+        </div>
+        </section>
+        
+        <section class="content-section" id="spotify-x-moveit">
+          <img src="img/harmoni.webp" alt="Spotify X Moveit">
+          <div class="content-info">
+          <h2>Spotify X Moveit</h2>
+          <p>Fancy livsstils højtaler der skaber harmoniii</p>
+          <a href="projekter/harmoni.html">Læs mere</a>
+        </div>
+        </section>
+      </section>
+
+
+
+        <div class="contact-form">
+          <form aria-label="Contact Form">
+            <label for="name">Navn:</label>
+            <input type="text" id="name" name="navn" required autocomplete="name">
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          
+            <label for="message">Besked:</label>
+            <textarea id="message" name="besked" required autocomplete="off"></textarea>
+              
+            <button type="submit">Send besked</button>
+          </form>
+          
+        </div>
+      </main>
+      
+      <footer>
+        <div class="container">
+            <div class="github-icon">
+                <a href="">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+            <div class="insta-icon">
+              <a href="">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+            <div class="linkedin-icon">
+                <a href="">
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>    
+            </div>
+        </div>
+
+        
+    </footer>
+</body>
+</html>
