@@ -3,125 +3,125 @@
 
 /* Definerer grundlæggende font- og farvevariabler til brug i hele stylesheetet */
 :root {
-  --title-font: 'Montserrat', sans-serif;
-  --body-font: 'Open Sans', sans-serif;
-  --title-font-size: 1.25rem; 
+  --title-font: 'Montserrat', sans-serif; /* Variabel for titelskrifttypen */
+  --body-font: 'Open Sans', sans-serif; /* Variabel for kroppens skrifttype */
+  --title-font-size: 1.25rem; /* Variabel for titelskriftstørrelse */
 }
 
 /* Sætter skrifttypen for alle overskrifter og links til titelskrifttypen og størrelsen */
 h1, h2, h3, a {
-  font-family: var(--title-font);
-  font-size: var(--title-font-size);
+  font-family: var(--title-font); /* Anvender titelskrifttypen */
+  font-size: var(--title-font-size); /* Anvender titelskriftstørrelsen */
 }
 
 /* Anvender titelskrifttypen til listeelementer */
 ul li {
-  font-family: var(--title-font);
+  font-family: var(--title-font); /* Anvender titelskrifttypen */
 }
 
 /* Definerer kroppen og afsnit med kroppens skrifttype og linjehøjde */
 body, p {
-  font-family: var(--body-font);
-  line-height: 1.8;
+  font-family: var(--body-font); /* Anvender kroppens skrifttype */
+  line-height: 1.8; /* Definerer linjehøjden */
 }
 
 /* Definerer standardfarven for links */
 a {
-  color: black;
+  color: black; /* Sætter standardfarven til sort */
 }
 
 /* Global stil til navigationslinjen */
 .navbar {
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  z-index: 999;
-  border-bottom: 1px solid black;
+  padding: 10px; /* Tilføjer indvendig polstring til navigationen */
+  display: flex; /* Bruger flexbox til at justere elementer */
+  justify-content: space-between; /* Fordeler elementer i navigationen vandret */
+  align-items: center; /* Centrerer elementer lodret */
+  position: relative; /* Positioner navigationen relativt i forhold til sit eget sted */
+  z-index: 999; /* Angiver stakorden for elementet (højere tal betyder, at det er foran andre elementer) */
+  border-bottom: 1px solid black; /* Tilføjer en sort bundgrænse til navigationen */
 }
-
 
 .burger {
-  cursor: pointer;
-  background: none;
-  border: none;
-  font-size: 24px;
+  cursor: pointer; /* Viser en håndmarkør, når musemarkøren er over burger-ikonet */
+  background: none; /* Fjerner baggrundsfarven */
+  border: none; /* Fjerner kantlinjer */
+  font-size: 24px; /* Indstiller skriftstørrelsen til 24 pixels */
 }
-
 
 .nav-menu {
-  margin: 0;
-  padding: 0;
-  display: none;
+  margin: 0; /* Fjerner yderligere margin fra menuen */
+  padding: 0; /* Fjerner yderligere polstring fra menuen */
+  display: none; /* Skjuler menuen som standard */
 }
-
 
 .nav-menu.active {
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  border: 1px solid black;
+  display: block; /* Viser menuen, når den har klassen "active" */
+  position: absolute; /* Positioner menuen absolut i forhold til det nærmeste positionerede forældreelement */
+  top: 100%; /* Placerer menuen 100% under forældreelementet (navigationslinjen) */
+  left: 0; /* Placerer menuen helt til venstre i forhold til forældreelementet */
+  width: 100%; /* Sætter menuens bredde til 100% af forældreelementets bredde */
+  background-color: white; /* Sætter baggrundsfarven til hvid */
+  border: 1px solid black; /* Tilføjer en sort kantlinje til menuen */
 }
 
 
+/* Styling for navigationselementer */
 .nav-menu li {
-  text-align: center;
-
+  text-align: center; /* Centrerer tekst inden i menuens listeelementer */
 }
 
 .nav-menu li a {
-  color: white;
-  padding: 10px;
-  display: block;
-  color: black;
+  color: white; /* Sætter tekstfarven til hvid */
+  padding: 10px; /* Tilføjer indvendig polstring til ankerelementer */
+  display: block; /* Gør ankerelementer til blokelementer for at få dem til at fylde hele menuens bredde */
+  color: black; /* Sætter tekstfarven til sort (dette kan overskrive tidligere farveindstillinger) */
 }
 
+/* Baggrundselementer til bobleanimation */
 #bobler {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Sæt boblerne bag andre elementer */
+  position: fixed; /* Holder boblelementet fast på skærmen */
+  top: 0; /* Placerer det øverst på skærmen */
+  left: 0; /* Placerer det helt til venstre på skærmen */
+  width: 100%; /* Gør bredden 100% af skærmbredden */
+  height: 100%; /* Gør højden 100% af skærmhøjden */
+  z-index: -1; /* Sætter boblerne bag andre elementer */
 }
 
+/* Bobleelementer til baggrundsanimation */
 .bubble {
-    position: absolute;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.2);
-    filter: blur(8px);
+  position: absolute; /* Positionerer boblerne absolut i forhold til forældreelementet */
+  border-radius: 50%; /* Giver boblerne en rund form */
+  background-color: rgba(255, 255, 255, 0.2); /* Sætter baggrundsfarven med gennemsigtighed */
+  box-shadow: 0 0 15px 10px rgba(255, 255, 255, 0.2); /* Tilføjer skygge og blur-effekt til boblerne */
+  filter: blur(8px); /* Anvender en blur-effekt */
 }
 
-/* styles.css */
+/* Keyframe-animation for boblerne */
 @keyframes float {
   0% {
-      transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1);
   }
   100% {
-      transform: translateY(-100vh) scale(1.5);
+    transform: translateY(-100vh) scale(1.5);
   }
 }
 
-
+/* Stil for hero-sektionen */
 .hero-section {
-  margin: 40px 20px; 
-  font-size: 20px; 
-  display: flex;
-  justify-content: center; /* Centrerer horisontalt */
-  align-items: center; /* Centrerer vertikalt */
+  margin: 40px 20px; /* Margin omkring hero-sektionen */
+  font-size: 20px; /* Skriftstørrelse */
+  display: flex; /* Bruger flexbox til at justere elementer */
+  justify-content: center; /* Centrerer elementer horisontalt */
+  align-items: center; /* Centrerer elementer vertikalt */
 }
 
 .hero-section h2 {
-  margin-top: 30px;
-  font-size: 24px;
-  font-weight: normal;
+  margin-top: 30px; /* Topmargin for overskriften */
+  font-size: 24px; /* Skriftstørrelse for overskriften */
+  font-weight: normal; /* Normal skriftvægt for overskriften */
 }
 
+/* Keyframe-animation for vinkende hånd */
 @keyframes wave {
   0%, 100% {
     transform: rotate(-20deg);
@@ -135,360 +135,349 @@ a {
 }
 
 .wave-hand {
-  display: inline-block;
-  animation: wave 2s infinite; 
-  transform-origin: 70% 70%; 
+  display: inline-block; /* Gør vinkende hånd til et inline-blok-element */
+  animation: wave 2s infinite; /* Anvender wave-animationen på vinkende hånd */
+  transform-origin: 70% 70%; /* Indstiller drejningspunkt for animationen */
 }
 
-/* Stil til projekter sektion */
+/* Stil for projektersektionen */
 #projekter {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  width: 100%;
-  padding-top: 90px;
+  display: flex; /* Bruger flexbox til at justere elementer */
+  flex-direction: column; /* Stabler elementer i kolonner */
+  align-items: center; /* Centrerer elementer vandret */
+  width: 100%; /* Gør bredden 100% af containeren */
+  padding-top: 90px; /* Topmargin for projektersektionen */
 }
 
-/* Stil til indholdssektioner med baggrundsfarve og skygge */
+/* Stil for indholdssektioner med baggrundsfarve og skygge */
 .content-section {
-  background-color: #F8F8FF; 
-  color: #002147; 
-  margin: 35px 15px; 
-  padding: 20px; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  width: 80vw;
+  background-color: #F8F8FF; /* Baggrundsfarve for indholdssektionen */
+  color: #002147; /* Tekstfarve */
+  margin: 35px 15px; /* Margin omkring sektionen */
+  padding: 20px; /* Indvendig polstring */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Tilføjer en skyggeeffekt */
+  border-radius: 10px; /* Afrunder hjørnerne */
+  width: 80vw; /* Gør bredden 80% af viewport-bredde */
 }
 
 /* Stil til billeder inden i indholdssektioner */
 .content-section img {
-  width: 100%; 
-  max-width: 150px; 
-  height: auto; 
-  display: block; 
-  margin: 0 auto 10px;
-  border-radius: 5px; 
+  width: 100%; /* Gør billedets bredde 100% af sin container */
+  max-width: 150px; /* Sætter en maksimal bredde på 150px for billeder */
+  height: auto; /* Bevarer billedets proportioner */
+  display: block; /* Gør billedet til et blokelement */
+  margin: 0 auto 10px; /* Centrerer billedet vandret og tilføjer nedadgående margin */
+  border-radius: 5px; /* Afrunder hjørnerne af billedet */
 }
 
 /* Stil til tekst inden i indholdssektioner */
 .content-section p {
-  color: black;
+  color: black; /* Sætter tekstfarven til sort */
 }
 
-/* Stil til overskrifter, afsnit, og links i indholdssektioner */
+/* Stil til overskrifter, afsnit og links i indholdssektioner */
 .content-section h2, .content-section p, .content-section a {
-  margin: 20px 0px; 
+  margin: 20px 0px; /* Tilføjer margin over og under tekstelementerne */
 }
 
 /* Stil og hover-effekt til links i indholdssektioner */
 .content-section a {
-  background-color: #002147; 
-  color: #FFFDD0; 
-  padding: 10px 20px; 
-  border-radius: 8px;
-  display: inline-block; 
-  text-align: center; 
-  transition: background-color 0.3s ease; 
+  background-color: #002147; /* Baggrundsfarve for links */
+  color: #FFFDD0; /* Tekstfarve for links */
+  padding: 10px 20px; /* Polstring omkring links */
+  border-radius: 8px; /* Afrunder hjørnerne af links */
+  display: inline-block; /* Gør links til inline-blokelementer */
+  text-align: center; /* Centrerer teksten i links */
+  transition: background-color 0.3s ease; /* Animerer baggrundsfarven ved hover */
 }
 
 .content-section a:hover {
-  background-color: #5a2352;
+  background-color: #5a2352; /* Ændrer baggrundsfarven ved hover */
 }
 
 /* Kontaktformular stilarter */
 .contact-form {
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-  }
-  form {
-    padding: 20px;
-    border-radius: 8px;
-  }
-  label {
-    color: #333;
-    display: block;
-    margin-bottom: 5px;
-  }
-  input, textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
-  input[type="text"], input[type="email"], textarea {
-    border: 1px solid #002147; 
-  }
-  button {
-    width: 50%;
-    padding: 10px;
-    border: none;
-    border-radius: 8px;
-    background-color: #002147;
-    color: #FFFDD0;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  button:hover {
-    background-color: #5a2352;
-  }
+  width: 100%; /* Gør formularcontaineren 100% bred */
+  max-width: 400px; /* Sætter en maksimal bredde på formularcontaineren */
+  margin: auto; /* Centrerer formularcontaineren vandret */
+  display: flex; /* Bruger flexbox til at justere elementer */
+  justify-content: center; /* Centrerer elementer horisontalt i formularcontaineren */
+}
 
+form {
+  padding: 20px; /* Polstring omkring formularindholdet */
+  border-radius: 8px; /* Afrunder hjørnerne af formularcontaineren */
+}
+
+label {
+  color: #333; /* Tekstfarve for label-elementer */
+  display: block; /* Gør label-elementer til blokelementer */
+  margin-bottom: 5px; /* Tilføjer nedadgående margin under label-elementer */
+}
+
+input, textarea {
+  width: calc(100% - 20px); /* Sætter bredden af input- og tekstareafelterne til 100% minus 20px polstring */
+  padding: 10px; /* Polstring omkring input- og tekstareafelterne */
+  margin-bottom: 15px; /* Tilføjer nedadgående margin under input- og tekstareafelterne */
+  border: 1px solid #ccc; /* Sætter en grænse omkring input- og tekstareafelterne */
+  border-radius: 4px; /* Afrunder hjørnerne af input- og tekstareafelterne */
+  box-sizing: border-box; /* Sørger for, at bredden inkluderer padding og grænser */
+}
+
+input[type="text"], input[type="email"], textarea {
+  border: 1px solid #002147; /* Ændrer grænsefarven for tekstfelter */
+}
+
+button {
+  width: 50%; /* Sætter bredden af knappen til 50% af sin container */
+  padding: 10px; /* Polstring omkring knappen */
+  border: none; /* Fjerner kantlinjen omkring knappen */
+  border-radius: 8px; /* Afrunder hjørnerne af knappen */
+  background-color: #002147; /* Baggrundsfarve for knappen */
+  color: #FFFDD0; /* Tekstfarve for knappen */
+  font-size: 16px; /* Skriftstørrelse for knappen */
+  cursor: pointer; /* Viser en markør ved hover */
+  transition: background-color 0.3s; /* Animerer baggrundsfarven ved hover */
+}
+
+button:hover {
+  background-color: #5a2352; /* Ændrer baggrundsfarven ved hover */
+}
 /* Stilarter til sidefod */
 footer {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    padding: 20px 0; 
-    height: 100px; 
-    border-top: 2px solid black;
+    display: flex; /* Bruger flexbox til at justere elementer */
+    justify-content: center; /* Centrerer elementer horisontalt */
+    align-items: center; /* Centrerer elementer vertikalt */
+    padding: 20px 0; /* Polstring øverst og nederst i sidefoden */
+    height: 100px; /* Sætter en fast højde for sidefoden */
+    border-top: 2px solid black; /* Tilføjer en øverste grænse med sort farve */
 }
 
 .container {
-    display: flex;
-    justify-content: space-around; 
-    align-items: center; 
-    height: 100%; 
-    width: 80%; 
+    display: flex; /* Bruger flexbox til at justere elementer */
+    justify-content: space-around; /* Fordeler elementer jævnt omkring containeren */
+    align-items: center; /* Centrerer elementer vertikalt */
+    height: 100%; /* Gør containeren 100% høj i forhold til sin forælder */
+    width: 80%; /* Sætter en fast bredde på 80% for containeren */
 }
 
 /* Stilarter til social media ikoner */
 .fa-instagram {
-    background: radial-gradient(circle at 30% 107%, #feda75 0%, #feda75 5%, #fa7e1e 45%, #d62976 60%, #962fbf 79%, #4f5bd5 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 1.5rem;
+    background: radial-gradient(circle at 30% 107%, #feda75 0%, #feda75 5%, #fa7e1e 45%, #d62976 60%, #962fbf 79%, #4f5bd5 100%); /* Baggrund med radial gradient for Instagram-ikonet */
+    -webkit-background-clip: text; /* Gør teksten transparent, hvor baggrunden vises */
+    background-clip: text; /* Gør teksten transparent, hvor baggrunden vises */
+    -webkit-text-fill-color: transparent; /* Sætter tekstfarven til transparent */
+    font-size: 1.5rem; /* Skriftstørrelse for ikonet */
 }
 
 .fa-linkedin {
-  font-size: 1.5rem;
-  color: #0a66c2;
+    font-size: 1.5rem; /* Skriftstørrelse for LinkedIn-ikonet */
+    color: #0a66c2; /* Sætter tekstfarven til LinkedIn-blå */
 }
 
 .fa-github {
-  color: black;
-  font-size: 1.5rem;
+    color: black; /* Sætter tekstfarven til sort for GitHub-ikonet */
+    font-size: 1.5rem; /* Skriftstørrelse for ikonet */
 }
 
-
-
-/*projektsider*/
-
+/* Stilarter til projektsider */
 .website-preview {
-  background-color: #F8F8FF;
-  padding: 20px; 
-  text-align: center;
-  margin: 0 auto 20px auto;
+    background-color: #F8F8FF; /* Baggrundsfarve for projektforhåndsvisningen */
+    padding: 20px; /* Polstring omkring projektforhåndsvisningen */
+    text-align: center; /* Centrerer teksten inden i projektforhåndsvisningen */
+    margin: 0 auto 20px auto; /* Centrerer projektforhåndsvisningen og tilføjer nedadgående margin */
 }
 
 .website-preview img {
-  max-width: 200px; 
-  height: auto;
-  display: block; 
-  margin: 0 auto; 
+    max-width: 200px; /* Sætter en maksimal bredde for billeder i projektforhåndsvisningen */
+    height: auto; /* Bevarer billedets proportioner */
+    display: block; /* Gør billedet til et blokelement */
+    margin: 0 auto; /* Centrerer billedet vandret */
 }
 
-
-
 .website-preview h2 {
-  margin: 10px 0; 
+    margin: 10px 0; /* Tilføjer margin over og under overskriften */
 }
 
 .website-preview a {
-  background-color: #002147; 
-  color: #FFFDD0; 
-  padding: 10px 20px;
-  border-radius: 5px; 
-  display: inline-block;
-  margin-top: 15px; 
-  text-decoration: none;
-  transition: background-color 0.3s; 
+    background-color: #002147; /* Baggrundsfarve for links i projektforhåndsvisningen */
+    color: #FFFDD0; /* Tekstfarve for links */
+    padding: 10px 20px; /* Polstring omkring links */
+    border-radius: 5px; /* Afrunder hjørnerne af links */
+    display: inline-block; /* Gør links til inline-blokelementer */
+    margin-top: 15px; /* Tilføjer margin øverst på links */
+    text-decoration: none; /* Fjerner understregning fra links */
+    transition: background-color 0.3s; /* Animerer baggrundsfarven ved hover */
 }
 
 .website-preview a:hover {
-  background-color: #5a2352;
+    background-color: #5a2352; /* Ændrer baggrundsfarven ved hover på links */
 }
 
-
-
-/* main content projekt sider*/
-
-.description, .about-container{
-  padding: 20px 40px; 
-  font-family: 'Open Sans', sans-serif;
+/* Stilarter til hovedindhold på projektsider */
+.description, .about-container {
+    padding: 20px 40px; /* Polstring omkring beskrivelser og områdebeholdere */
+    font-family: 'Open Sans', sans-serif; /* Skrifttype for tekstelementer */
 }
 
 .project-desc p {
-  line-height: 2;
+    line-height: 2; /* Linjeafstand for tekstelementer i projektbeskrivelser */
 }
+
 .description .role ul {
-  padding-left: 0; 
-  margin-left: 1.1em; 
-  list-style-type: disc;
+    padding-left: 0; /* Fjerner indrykning fra punktlister */
+    margin-left: 1.1em; /* Tilføjer indrykning til punktlister */
+    list-style-type: disc; /* Sætter punkttegn til disk-bullet */
 }
 
 .role {
-  margin-top: 35px;
+    margin-top: 35px; /* Tilføjer øverste margin til roller */
 }
 
 .role ul li {
-  margin: 5px 0; 
+    margin: 5px 0; /* Tilføjer margin over og under punktpunkter i roller */
 }
 
-
-
 .solution, .about {
-  background-color: #002147;
-  color: #FFFDD0;
-  padding: 30px; 
-  border-radius: 8px;
-  margin-top: 35px; 
-  font-family: 'Open Sans', sans-serif;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #002147; /* Baggrundsfarve for løsning og områdebeholdere */
+    color: #FFFDD0; /* Tekstfarve */
+    padding: 30px; /* Polstring omkring løsning og områdebeholdere */
+    border-radius: 8px; /* Afrunder hjørnerne */
+    margin-top: 35px; /* Øverste margin for løsning og områdebeholdere */
+    font-family: 'Open Sans', sans-serif; /* Skrifttype */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tilføjer en skyggeeffekt */
 }
 
 .solution h2, .about h2 {
-  margin-bottom: 20px;
-  text-align: center;
+    margin-bottom: 20px; /* Nedadgående margin under overskrifter */
+    text-align: center; /* Centrerer overskrifter */
 }
 
-
-
-/*about */
-
+/* Stilarter til "about" sektionen */
 .profile-card {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 100%; /* Gør kortet 100% bredt */
+  margin: 0 auto; /* Centrerer kortet horisontalt */
+  padding: 20px; /* Polstring omkring kortet */
 }
+
 .profile-image {
-  width: 100%;
-  height: 200px;
-  border-radius: 5px;
-  margin-top: 20px;
-  margin-bottom: 50px;
+  width: 100%; /* Gør profilbilledet 100% bredt */
+  height: 200px; /* Sætter en fast højde for profilbilledet */
+  border-radius: 5px; /* Afrunder hjørnerne af profilbilledet */
+  margin-top: 20px; /* Tilføjer øverste margin til profilbilledet */
+  margin-bottom: 50px; /* Tilføjer nederste margin til profilbilledet */
 }
 
 .profile-image img {
-  width: 50%; 
-  height: auto; /* aspektforhold */
-  object-fit: cover;
-  margin: 0 auto; /* centrering af billedet */
+  width: 50%; /* Sætter bredden til 50% af forældreelementet */
+  height: auto; /* Bevarer billedets proportioner */
+  object-fit: cover; /* Tilpasser billedet til containeren med bevaring af proportioner */
+  margin: 0 auto; /* Centrerer billedet vandret */
 }
 
 .skills-apps {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
+  display: flex; /* Bruger flexbox til at justere elementer */
+  justify-content: space-around; /* Fordeler elementer jævnt omkring containeren */
+  margin-top: 30px; /* Tilføjer øverste margin til færdigheder og apps sektionen */
 }
 
 .skills-apps h2 {
-  color: #002147;
+  color: #002147; /* Sætter overskriftens farve */
 }
 
 
-
-/* Desktops */
+/* Desktop-stilarter */
 @media (min-width: 768px) {
 
   .burger {
-    display: none;
+    display: none; /* Skjuler burger-menuen på desktop */
   }
 
   .navbar {
-    display: flex;
-    justify-content: space-around;
+    display: flex; /* Viser navigationselementer på desktop */
+    justify-content: space-around; /* Fordeler elementer jævnt omkring navigationen */
   }
 
   .nav-menu {
-    display: block;
-    width: auto; 
-    padding: 0;
+    display: block; /* Viser menuen på desktop */
+    width: auto; /* Tilpasser bredden efter indhold */
+    padding: 0; /* Fjerner polstring */
   }
 
   .nav-menu li {
-    display: inline-block;
+    display: inline-block; /* Viser menuelementer som inline-blokke */
   }
 
-
-   .nav-menu li a {
-    color: black;
-    padding: 10px;
-    display: block;
-    border-radius: 5px;
+  .nav-menu li a {
+    color: black; /* Tekstfarve for menuelementer */
+    padding: 10px; /* Polstring omkring menuelementer */
+    display: block; /* Gør menuelementer til blokelementer */
+    border-radius: 5px; /* Afrunder hjørnerne af menuelementer */
     transition: color 0.3s ease, background-color 0.3s ease; /* Glat overgang for farve og baggrundsfarve */
   }
 
   .nav-menu li a:hover, .nav-menu li a:focus {
-    color: #FFFDD0;
-    background-color: #002147;
+    color: #FFFDD0; /* Ændrer tekstfarve ved hover */
+    background-color: #002147; /* Ændrer baggrundsfarve ved hover */
   }
   
   .hero-section {
-    font-size: 24px; 
-    margin: 60px 40px;
-    align-items: center;
+    font-size: 24px; /* Skriftstørrelse for hero-sektion på desktop */
+    margin: 60px 40px; /* Margin omkring hero-sektionen */
+    align-items: center; /* Centrerer elementer vertikalt */
   } 
 
   .hero-section h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.25em; 
+    font-size: 2.5rem; /* Skriftstørrelse for hovedoverskriften */
+    margin-bottom: 0.25em; /* Nedadgående margin under hovedoverskriften */
   }
   .hero-section h2 {
-    font-size: 2rem;
+    font-size: 2rem; /* Skriftstørrelse for underteksten */
   }
 
   .hero-container {
-    transform: translateX(-100vw);
-    opacity: 0;
+    transform: translateX(-100vw); /* Flytter hero-container uden for synsfeltet */
+    opacity: 0; /* Gør hero-container usynlig */
   }
   
 
   .content-section img {
-    max-width: 250px; 
-    margin: 30px;
-
-    
+    max-width: 250px; /* Sætter en maksimal bredde for billeder i indholdssektionen på desktop */
+    margin: 30px; /* Margin omkring billeder i indholdssektionen på desktop */
   }
 
 
   .content-section {
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35vw;
-    transition: transform 0.2s ease-in;
+    padding: 20px; /* Polstring omkring indholdssektionen på desktop */
+    display: flex; /* Bruger flexbox til at justere elementer */
+    align-items: center; /* Centrerer elementer vertikalt */
+    justify-content: center; /* Centrerer elementer horisontalt */
+    width: 35vw; /* Sætter en fast bredde på indholdssektionen på desktop */
+    transition: transform 0.2s ease-in; /* Animerer transformationen ved hover */
   }
 
   .content-section:hover {
-    transform: scale(1.05);
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transform: scale(1.05); /* Forstørrer indholdssektionen ved hover */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Tilføjer en skyggeeffekt ved hover */
   }
 
 
   .content-info {
-    display: flex;
-    flex-direction: column;
-
-
+    display: flex; /* Bruger flexbox til at justere elementer */
+    flex-direction: column; /* Stapler elementerne i en kolonne */
   }
 
   .content-section a {
-    width: 150px;
+    width: 150px; /* Sætter en fast bredde på links i indholdssektionen på desktop */
   }
   .contact-form {
-    max-width: 800px;
+    max-width: 800px; /* Sætter en maksimal bredde på kontaktformularen på desktop */
   }
 
   .website-preview img {
-    max-width: 400px; 
+    max-width: 400px; /* Sætter en maksimal bredde for billeder i projektforhåndsvisningen på desktop */
   }
+}
 
  
   
@@ -516,57 +505,72 @@ footer {
   margin: auto; /* Centrerer boksen horisontalt  */
 }
 
-.solution {
-  width: 50%; 
-  margin-left: auto; 
-  margin-right: auto;
-  margin-bottom: 50px;
+/* Stilarter til "solution" og "about" sektioner */
+.solution, .about {
+  padding: 60px; /* Tilføjer polstring omkring "solution" og "about" sektionerne */
 }
 
-/*about*/
-.greeting {
+/* Stilarter til "projekter" sektion */
+.description-wrapper {
+  display: flex; /* Bruger flexbox til at justere elementer */
+  justify-content: center; /* Centrerer børneelementer horisontalt */
+  align-items: center; /* Centrerer børneelementer vertikalt */
+  flex-wrap: wrap; /* Tillader elementer at falde nedunder hinanden på mindre skærme */
+}
 
-  padding-right: 20px;
+.project-desc {
+  width: 30vw; /* Sætter en fast bredde på projektbeskrivelserne */
+  margin: auto; /* Centrerer boksen horisontalt */
+}
+
+.role {
+  margin: auto; /* Centrerer boksen horisontalt */
+}
+
+.solution {
+  width: 50%; /* Sætter en fast bredde på løsningselementet */
+  margin-left: auto; /* Centrerer løsningselementet horisontalt */
+  margin-right: auto; /* Centrerer løsningselementet horisontalt */
+  margin-bottom: 50px; /* Tilføjer nederste margin til løsningselementet */
+}
+
+/* Stilarter til "about" sektion */
+.greeting {
+  padding-right: 20px; /* Tilføjer højre polstring til hilsen */
 }
 
 .profile-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 20px; 
+  display: flex; /* Bruger flexbox til at justere elementer */
+  align-items: center; /* Centrerer elementer vertikalt */
+  justify-content: space-around; /* Fordeler elementer jævnt omkring kortet */
+  padding: 20px; /* Polstring omkring kortet */
 }
 
-
 .profile-image {
-  max-width: 400px;
-  padding: 20px;
+  max-width: 400px; /* Sætter en maksimal bredde for profilbilledet */
+  padding: 20px; /* Polstring omkring profilbilledet */
 }
 
 .profile-image img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 400px; 
+  width: auto; /* Sørger for, at billedet tilpasser sig sin container i bredden */
+  height: auto; /* Sørger for, at billedet tilpasser sig sin container i højden */
+  max-width: 100%; /* Sætter en maksimal bredde for billedet */
+  max-height: 400px; /* Sætter en maksimal højde for billedet */
 }
 
-
 .about {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 80px;
-  width: 30vw;
+  margin-left: auto; /* Centrerer "about" sektionen horisontalt */
+  margin-right: auto; /* Centrerer "about" sektionen horisontalt */
+  margin-top: 80px; /* Tilføjer øverste margin til "about" sektionen */
+  width: 30vw; /* Sætter en fast bredde på "about" sektionen */
 }
 
 .profile-image {
-  width: 100%;
+  width: 100%; /* Gør profilbilledet 100% bredt inden for sin container */
 }
 
 .profile-image img {
   width: 100%; /* Gør billedet fuld bredde inden for sin container */
   max-width: 200px; /* Sætter en maksimal bredde for billedet */
-  height: auto; /* Sørger for at højden justeres proportionalt */
+  height: auto; /* Sørger for, at højden justeres proportionalt */
 }
-
-}
-
-
